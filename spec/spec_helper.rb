@@ -26,8 +26,9 @@ Rspec.configure do |config|
   config.use_transactional_fixtures = true
 
   config.include Devise::TestHelpers, :type => :controller
-  #config.before(:authenticate => :admin) do
-   # sign_in User.find_or_by_email("admin@example.com")
- # end
+
+  config.before(:authenticate => :admin) do
+    sign_in User.first || Factory(:user)
+  end
 
 end
