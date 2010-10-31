@@ -10,6 +10,7 @@ gem 'devise'
 
 gem 'rspec'
 gem 'rspec-rails', ">= 2.0.0.beta.20"
+gem 'factory_girl'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe PostsController do
+  before do
+    sign_in User.first || Factory(:user)
+  end
 
   def mock_post(stubs={})
     @mock_post ||= mock_model(Post, stubs).as_null_object
